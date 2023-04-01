@@ -1,9 +1,9 @@
 export default class Books {
-    constructor(title, author) {
-      this.title = title;
-      this.author = author;
-    }
-  
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
     add = () => {
       const booklist = JSON.parse(localStorage.getItem('array')) || [];
       const value1 = this.title.trim();
@@ -14,7 +14,7 @@ export default class Books {
         this.display();
       }
     }
-  
+
     display = () => {
       const booklist = JSON.parse(localStorage.getItem('array'));
       const list = document.querySelector('#list');
@@ -35,7 +35,7 @@ export default class Books {
         }
       }
     }
-  
+
     static displayall = () => {
       const booklist = JSON.parse(localStorage.getItem('array')) || [];
       const list = document.querySelector('#list');
@@ -54,7 +54,7 @@ export default class Books {
         }
       }
     }
-  
+
     static remove() {
       const booklist = JSON.parse(localStorage.getItem('array'));
       const parent = document.querySelector('#list');
@@ -65,4 +65,4 @@ export default class Books {
       booklist.splice(butto, 1);
       localStorage.setItem('array', JSON.stringify(booklist));
     }
-  }
+}
