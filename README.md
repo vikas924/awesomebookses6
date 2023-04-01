@@ -30,9 +30,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [Awesome books plain js] <a name="about-project"></a>
+# 📖 [Awesome books es6] <a name="about-project"></a>
 
-**[Awesome books plain js]** In this project i created simple form in which can add and remove books with title and author name and store in local storage using plain js.
+**[Awesome books es6]** In this project i refactor awesome books code into modules,implemented es6 features and added time through luxon library.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]( https://vikas924.github.io/Awesome-books/)
+- [Live Demo Link]( https://vikas924.github.io/awesomebookses6/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
