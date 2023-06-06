@@ -14,6 +14,14 @@ export default class Books {
         this.display();
       }
     }
+  
+  static style = () => {
+    const change = document.querySelectorAll('.div');
+      for (let i = 0; i < booklist.length; i += 1) {
+        if (i % 2 === 0) {
+          change[i].classList.add('background');
+        }
+      }
 
     display = () => {
       const booklist = JSON.parse(localStorage.getItem('array'));
@@ -28,12 +36,7 @@ export default class Books {
         const button = document.querySelectorAll('#button');
         button[i].addEventListener('click', Books.remove);
       }
-      const change = document.querySelectorAll('.div');
-      for (let i = 0; i < booklist.length; i += 1) {
-        if (i % 2 === 0) {
-          change[i].classList.add('background');
-        }
-      }
+      Books.style();
     }
 
     static displayall = () => {
@@ -47,12 +50,7 @@ export default class Books {
         const button = document.querySelectorAll('#button');
         button[i].addEventListener('click', Books.remove);
       }
-      const change = document.querySelectorAll('.div');
-      for (let i = 0; i < booklist.length; i += 1) {
-        if (i % 2 === 0) {
-          change[i].classList.add('background');
-        }
-      }
+      Books.style();
     }
 
     static remove() {
@@ -63,6 +61,7 @@ export default class Books {
       const reele = this.parentNode.parentNode;
       parent.removeChild(reele);
       booklist.splice(butto, 1);
+      Books.style();
       localStorage.setItem('array', JSON.stringify(booklist));
     }
 }
