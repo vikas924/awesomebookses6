@@ -14,14 +14,18 @@ export default class Books {
         this.display();
       }
     }
-  
+
   static style = () => {
+    const booklist = JSON.parse(localStorage.getItem('array'));
     const change = document.querySelectorAll('.div');
-      for (let i = 0; i < booklist.length; i += 1) {
-        if (i % 2 === 0) {
-          change[i].classList.add('background');
-        }
+    for (let i = 0; i < booklist.length; i += 1) {
+      if (i % 2 === 0) {
+        change[i].classList.add('background');
+      } else if (i % 2 !== 0) {
+        change[i].classList.remove('background');
       }
+    }
+  }
 
     display = () => {
       const booklist = JSON.parse(localStorage.getItem('array'));
@@ -61,7 +65,7 @@ export default class Books {
       const reele = this.parentNode.parentNode;
       parent.removeChild(reele);
       booklist.splice(butto, 1);
-      Books.style();
       localStorage.setItem('array', JSON.stringify(booklist));
+      Books.style();
     }
 }
