@@ -4,7 +4,7 @@
   <img src="readme-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Awesome books</b></h3>
+  <h3><b>Awesome test</b></h3>
 
 </div>
 
